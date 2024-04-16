@@ -385,6 +385,10 @@ def parse_metar_file(filename, *, year=None, month=None):
                                     year=year, month=month)
 
 
+@exporter.export
+def metars_to_dataframe(metar_iter, *, year=None, month=None):
+    return _metars_to_dataframe(metar_iter, year=year, month=year)
+
 def _metars_to_dataframe(metar_iter, *, year=None, month=None):
     """Turn an iterable of METAR reports into a DataFrame.
 
