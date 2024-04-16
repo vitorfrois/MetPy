@@ -105,7 +105,7 @@ def parse_metar_to_dataframe(metar_text, *, year=None, month=None):
     """
     return _metars_to_dataframe([metar_text], year=year, month=month)
 
-
+@exporter.export
 def parse_metar(metar_text, year, month, station_metadata=station_info):
     """Parse a METAR report in text form into a list of named tuples.
 
